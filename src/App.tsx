@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Home, Calendar, Trophy, Users, Target, Zap } from "lucide-react";
+import { Home, Calendar, Trophy, Target } from "lucide-react";
 
 const FussNews = () => {
   const [currentPage, setCurrentPage] = useState("home");
