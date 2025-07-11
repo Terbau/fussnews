@@ -97,7 +97,7 @@ const FussNews = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        {/* Game Tip of the Day */}
+        {/* Dagens strategi */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-12 border-l-4 border-green-500">
           <div className="flex items-center mb-4">
             {gameOfTheDay.icon}
