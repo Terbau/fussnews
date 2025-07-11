@@ -102,7 +102,7 @@ const FussNews = () => {
           <div className="flex items-center mb-4">
             {gameOfTheDay.icon}
             <h2 className="text-2xl font-bold text-gray-800 ml-3">
-              Game Tip of the Day
+              Dagens strategi
             </h2>
           </div>
           <h3 className="text-xl font-semibold text-green-700 mb-3">
