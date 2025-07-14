@@ -70,7 +70,7 @@ const FussNews = () => {
       id: 1,
       title: "Upset fant plass i Vy vs Brregofantene",
       summary: "Regionale kvalifiseringer avsluttet med overraskende oppsett",
-      date: "2024-07-10",
+      date: "2025-07-10",
       category: "Tournament",
       details:
         "Rett etter lunsj fant en voldsomt spennende kamp sted mellom Vy og Brregofantene. Begge lag viste imponerende ferdigheter, men det var Vy som til slutt trakk det lengste strået. Dette ved å hyre inn den danske drenge Kasper, en særdeles god speller.",
@@ -80,7 +80,7 @@ const FussNews = () => {
       id: 2,
       title: "UDI tok uventet grep mot Satsedir",
       summary: "Nervepirrende kamp endte i overbevisende stil for UDI",
-      date: "2024-07-08",
+      date: "2025-07-08",
       category: "Tournament",
       details:
         "Tidlig på ettermiddagen møttes Satsedir og UDI i en kamp som mange trodde Satsedir skulle dominere. Men det var UDI som tok initiativet fra første ball. Med lynraske vendinger og aggressivt press sjokkerte de motstanderen. Midtbanespilleren Farhad ble kampens store profil med flere avgjørende blokker og et nydelig langskudd. Satsedir kom aldri helt inn i rytmen og måtte til slutt se seg slått.",
@@ -90,7 +90,7 @@ const FussNews = () => {
       id: 5,
       title: "Brregofantene utklasset Satsedir i energisk oppgjør",
       summary: "Brreg med full kontroll fra start til slutt",
-      date: "2024-07-04",
+      date: "2025-07-04",
       category: "Tournament",
       details:
         "Satsedir fikk det tøft da de møtte et toppet Brregofantene-lag som ikke lot seg stanse. Allerede etter få minutter satte Brreg presset, og det var tydelig at de hadde gjort hjemmeleksa si. Midtbanemotoren Lasse styrte tempoet, og spissen Emil leverte to mål med kirurgisk presisjon. Satsedir forsøkte å svare, men støtte gang på gang på et defensivt murverk. Det endte med klar seier til Brregofantene – og et kraftig varsko til resten av feltet.",
@@ -101,46 +101,46 @@ const FussNews = () => {
   const Header = () => (
     <header className="bg-gradient-to-r from-green-600 via-green-700 to-green-800 text-white shadow-lg">
       <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-col sm:flex-row items-center justify-between">
-          <div className="flex items-center space-x-2 mb-4 sm:mb-0">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
               <div className="w-6 h-6 bg-green-600 rounded-full"></div>
             </div>
             <h1 className="text-2xl font-bold">FussNews</h1>
           </div>
-          <nav className="flex space-x-2 sm:space-x-6 w-full sm:w-auto justify-center sm:justify-end">
+          <nav className="flex space-x-6">
             <button
               onClick={() => setCurrentPage("home")}
-              className={`flex items-center space-x-1 sm:space-x-2 px-2 sm:px-4 py-2 rounded-lg transition-colors text-sm sm:text-base ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
                 currentPage === "home"
                   ? "bg-white text-green-700 font-semibold"
                   : "hover:bg-green-600"
               }`}
             >
               <Home className="w-4 h-4" />
-              <span className="hidden sm:inline">Home</span>
+              <span>Home</span>
             </button>
             <button
               onClick={() => setCurrentPage("updates")}
-              className={`flex items-center space-x-1 sm:space-x-2 px-2 sm:px-4 py-2 rounded-lg transition-colors text-sm sm:text-base ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
                 currentPage === "updates"
                   ? "bg-white text-green-700 font-semibold"
                   : "hover:bg-green-600"
               }`}
             >
               <Calendar className="w-4 h-4" />
-              <span className="hidden sm:inline">Updates</span>
+              <span>Updates</span>
             </button>
             <button
               onClick={() => setCurrentPage("tips")}
-              className={`flex items-center space-x-1 sm:space-x-2 px-2 sm:px-4 py-2 rounded-lg transition-colors text-sm sm:text-base ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
                 currentPage === "tips"
                   ? "bg-white text-green-700 font-semibold"
                   : "hover:bg-green-600"
               }`}
             >
               <Target className="w-4 h-4" />
-              <span className="hidden sm:inline">Tips</span>
+              <span>Tips</span>
             </button>
           </nav>
         </div>
@@ -236,58 +236,58 @@ const FussNews = () => {
 
   const UpdatesPage = () => (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      <div className="container mx-auto px-4 py-8 sm:py-12">
+      <div className="container mx-auto px-4 py-12">
         <div className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Latest Updates
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600">
+          <p className="text-xl text-gray-600">
             Stay informed with the latest foosball news and developments
           </p>
         </div>
 
-        <div className="space-y-6 sm:space-y-8">
+        <div className="space-y-8">
           {updates.map((update) => (
             <article
               key={update.id}
-              className="bg-white rounded-xl shadow-lg p-6 sm:p-8 border-l-4 border-green-500"
+              className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500"
             >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-                <div className="flex items-center space-x-3 mb-2 sm:mb-0">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center space-x-3">
                   {update.icon}
-                  <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
+                  <h2 className="text-2xl font-bold text-gray-800">
                     {update.title}
                   </h2>
                 </div>
-                <div className="text-left sm:text-right">
+                <div className="text-right">
                   <div className="text-sm text-gray-500">{update.date}</div>
                   <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mt-1">
                     {update.category}
                   </span>
                 </div>
               </div>
-              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed">
                 {update.details}
               </p>
             </article>
           ))}
         </div>
 
-        <div className="mt-8 sm:mt-12 text-center">
-          <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
+        <div className="mt-12 text-center">
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
               Want to stay updated?
             </h3>
             <p className="text-gray-600 mb-6">
               Get the latest foosball news delivered straight to your inbox
             </p>
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex justify-center space-x-4">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 w-full sm:w-64"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 w-64"
               />
-              <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors w-full sm:w-auto">
+              <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
                 Subscribe
               </button>
             </div>
