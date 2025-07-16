@@ -5,10 +5,10 @@ const FussNews = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
   const gameOfTheDay = {
-    title: "Winkelskudd",
+    title: "Frontpass",
     description:
-      'Ingenting er vanskeligere enn å ta et hardt skudd som kommer fra en ekkel vinkel, også kalt winkelskudd. Spinn spaken i valgfritt tempo, men treff ballen litt på kanten slik at den får en skrå retning. Avansert versjon av denne teknikken kalles "Skjalgs teknikk". Dette innebærer å skyte ballen mens du tar et lite hopp bakover, slik at ballen blir dratt med i bevegelsen.',
-    difficulty: "Advanced",
+      'Lenge har forsvaret dominert banen. Den tiden er slutt. Nå er det angrepet som står for målene, og det viktigste er å få ballen kontrollert frem til spissen. Har du en Pelé fra Pakistan på laget, eksploderer sjansene for en seier astronomisk.',
+    difficulty: "Intermediate",
     icon: <Target className="w-6 h-6" />,
     date: "2025-07-16",
   };
@@ -16,6 +16,15 @@ const FussNews = () => {
   const yesterdaysTips = [
     {
       id: 0,
+      title: "Winkelskudd",
+      description:
+        'Ingenting er vanskeligere enn å ta et hardt skudd som kommer fra en ekkel vinkel, også kalt winkelskudd. Spinn spaken i valgfritt tempo, men treff ballen litt på kanten slik at den får en skrå retning. Avansert versjon av denne teknikken kalles "Skjalgs teknikk". Dette innebærer å skyte ballen mens du tar et lite hopp bakover, slik at ballen blir dratt med i bevegelsen.',
+      difficulty: "Advanced",
+      icon: <Target className="w-6 h-6" />,
+      date: "2025-07-15",
+    },
+    {
+      id: 1,
       title: "ADHD-Stratten",
       description:
         "Som forsvarspiller er det viktig å være uforutsigbar. Det er ikke å legge skjul på at flere i twoday har en viss form for ADHD, og ved å kontinuerlig dra spaken frem og tilbake, kan du skape forvirring hos motstanderen. Dette kan åpne opp for angrepsmuligheter og gi deg en fordel i spillet.",
@@ -24,7 +33,7 @@ const FussNews = () => {
       date: "2025-07-14",
     },
     {
-      id: 1,
+      id: 2,
       title: "Backpass",
       description:
         "Det ryktes om at keeperen er den beste spilleren på banen. Gjør det til din fordel ved å bruke backpass-teknikken. Dette kan lure motstanderen og gi deg en fordel i spillet.",
