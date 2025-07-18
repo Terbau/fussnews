@@ -7,15 +7,24 @@ const FussNews = () => {
   const gameOfTheDay = {
     title: "Frontpass",
     description:
-      'Lenge har forsvaret dominert banen. Den tiden er slutt. Nå er det angrepet som står for målene, og det viktigste er å få ballen kontrollert frem til spissen. Har du en Pelé fra Pakistan på laget, eksploderer sjansene for en seier astronomisk.',
+      "Lenge har forsvaret dominert banen. Den tiden er slutt. Nå er det angrepet som står for målene, og det viktigste er å få ballen kontrollert frem til spissen. Har du en Pelé fra Pakistan på laget, eksploderer sjansene for en seier astronomisk.",
     difficulty: "Intermediate",
     icon: <Target className="w-6 h-6" />,
     date: "2025-07-16",
   };
 
-  const yesterdaysTips = [
+  const tips = [
     {
       id: 0,
+      title: "Frontpass",
+      description:
+        "Lenge har forsvaret dominert banen. Den tiden er slutt. Nå er det angrepet som står for målene, og det viktigste er å få ballen kontrollert frem til spissen. Har du en Pelé fra Pakistan på laget, eksploderer sjansene for en seier astronomisk.",
+      difficulty: "Intermediate",
+      icon: <Target className="w-6 h-6" />,
+      date: "2025-07-16",
+    },
+    {
+      id: 1,
       title: "Winkelskudd",
       description:
         'Ingenting er vanskeligere enn å ta et hardt skudd som kommer fra en ekkel vinkel, også kalt winkelskudd. Spinn spaken i valgfritt tempo, men treff ballen litt på kanten slik at den får en skrå retning. Avansert versjon av denne teknikken kalles "Skjalgs teknikk". Dette innebærer å skyte ballen mens du tar et lite hopp bakover, slik at ballen blir dratt med i bevegelsen.',
@@ -24,7 +33,7 @@ const FussNews = () => {
       date: "2025-07-15",
     },
     {
-      id: 1,
+      id: 2,
       title: "ADHD-Stratten",
       description:
         "Som forsvarspiller er det viktig å være uforutsigbar. Det er ikke å legge skjul på at flere i twoday har en viss form for ADHD, og ved å kontinuerlig dra spaken frem og tilbake, kan du skape forvirring hos motstanderen. Dette kan åpne opp for angrepsmuligheter og gi deg en fordel i spillet.",
@@ -33,7 +42,7 @@ const FussNews = () => {
       date: "2025-07-14",
     },
     {
-      id: 2,
+      id: 3,
       title: "Backpass",
       description:
         "Det ryktes om at keeperen er den beste spilleren på banen. Gjør det til din fordel ved å bruke backpass-teknikken. Dette kan lure motstanderen og gi deg en fordel i spillet.",
@@ -41,47 +50,29 @@ const FussNews = () => {
       icon: <Target className="w-6 h-6" />,
       date: "2025-07-11",
     },
-    // {
-    //   id: 1,
-    //   title: "Defensiv mur",
-    //   description: "Bygg en solid defensiv mur med dine defensive spillere. Hold dem parallelle og beveg dem som en enhet for å blokkere motstanderens angrep effektivt.",
-    //   difficulty: "Beginner",
-    //   date: "2025-07-13",
-    //   icon: <Target className="w-6 h-6" />
-    // },
-    // {
-    //   id: 2,
-    //   title: "Pinpoint passing",
-    //   description: "Øv på presise korte pasninger mellom midtbane og angrep. Timing er alt - vent til motstanderens forsvarere er ute av posisjon før du slår pasningen.",
-    //   difficulty: "Advanced",
-    //   date: "2025-07-12",
-    //   icon: <Target className="w-6 h-6" />
-    // },
-    // {
-    //   id: 3,
-    //   title: "Keeper kontroll",
-    //   description: "Lær å kontrollere ballen med keeperen din. Bruk veggen til å stoppe ballen og sett opp angrep fra baklinjen med presise pasninger til midtbanen.",
-    //   difficulty: "Intermediate",
-    //   date: "2025-07-11",
-    //   icon: <Target className="w-6 h-6" />
-    // },
-    // {
-    //   id: 4,
-    //   title: "Fake shot teknikk",
-    //   description: "Lur motstanderens keeper med fake shots. Gjør bevegelser som om du skal skyte, men hold ballen og vent på en bedre mulighet eller pass til en medspiller.",
-    //   difficulty: "Advanced",
-    //   date: "2025-07-10",
-    //   icon: <Target className="w-6 h-6" />
-    // },
-    // {
-    //   id: 5,
-    //   title: "Sidespin magi",
-    //   description: "Mester sidespinnet for å få ballen til å krølle rundt motstanderens forsvarere. Dette krever øvelse, men kan være avgjørende i tette situasjoner.",
-    //   difficulty: "Expert",
-    //   date: "2025-07-09",
-    //   icon: <Target className="w-6 h-6" />
-    // }
+    {
+      id: 4,
+      title: "Backshots",
+      description:
+        "Det er fredag, og hva er ikke bedre enn å avslutte uka med noen backshots? Nå som alle har blitt nokså gode, er det de rare strategiene som gjelder. Fyk ballen bakover og håp på det beste.",
+      difficulty: "Beginner",
+      icon: <Target className="w-6 h-6" />,
+      date: "2025-07-18",
+    },
+    {
+      id: 5,
+      title: "360-noscope",
+      description:
+        "Ta en skjalg, ha det gøy. Skyt og snurr.",
+      difficulty: "Advanced",
+      icon: <Target className="w-6 h-6" />,
+      date: "2025-07-21",
+    },
   ];
+
+  // find todays tip based on the current date
+  const today = new Date().toISOString().split("T")[0];
+  const todaysTip = tips.find((tip) => tip.date === today);
 
   const updates = [
     {
@@ -337,7 +328,7 @@ const FussNews = () => {
         {/* Today's tip */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8 border-l-4 border-green-500">
           <div className="flex items-center mb-4">
-            {gameOfTheDay.icon}
+            {todaysTip?.icon}
             <h2 className="text-2xl font-bold text-gray-800 ml-3">
               Dagens strategi
             </h2>
@@ -346,16 +337,16 @@ const FussNews = () => {
             </span>
           </div>
           <h3 className="text-xl font-semibold text-green-700 mb-3">
-            {gameOfTheDay.title}
+            {todaysTip?.title}
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed mb-4">
-            {gameOfTheDay.description}
+            {todaysTip?.description}
           </p>
           <div className="flex items-center justify-between">
             <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-              {gameOfTheDay.difficulty}
+              {todaysTip?.difficulty}
             </div>
-            <div className="text-sm text-gray-500">{gameOfTheDay.date}</div>
+            <div className="text-sm text-gray-500">{todaysTip?.date}</div>
           </div>
         </div>
 
@@ -366,7 +357,7 @@ const FussNews = () => {
             Tidligere tips
           </h2>
 
-          {yesterdaysTips.map((tip) => (
+          {tips.map((tip) => (
             <article
               key={tip.id}
               className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-gray-300 hover:border-green-400 transition-colors"

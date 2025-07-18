@@ -13,7 +13,7 @@ const FussNews = () => {
     date: "2025-07-14",
   };
 
-  const yesterdaysTips = [
+  const tips = [
     {
       id: 0,
       title: "Backpass",
@@ -348,7 +348,7 @@ const FussNews = () => {
             Tidligere tips
           </h2>
 
-          {yesterdaysTips.map((tip) => (
+          {tips.map((tip) => (
             <article
               key={tip.id}
               className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-gray-300 hover:border-green-400 transition-colors"
