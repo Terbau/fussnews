@@ -4,7 +4,7 @@ import { Home, Calendar, Trophy, Target, ChevronLeft } from "lucide-react";
 const FussNews = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
-  const tips = [
+  const allTips = [
     {
       id: 0,
       title: "Frontpass",
@@ -53,13 +53,17 @@ const FussNews = () => {
     {
       id: 5,
       title: "360-noscope",
-      description:
-        "Ta en skjalg, ha det gøy. Skyt og snurr.",
+      description: "Ta en skjalg, ha det gøy. Skyt og snurr.",
       difficulty: "Advanced",
       icon: <Target className="w-6 h-6" />,
       date: "2025-07-21",
     },
   ];
+
+  // Filter tips for future dates out
+  const tips = allTips
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .filter((tip) => tip.date < today);
 
   // find todays tip based on the current date
   const today = new Date().toISOString().split("T")[0];
