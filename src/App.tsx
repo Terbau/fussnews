@@ -60,13 +60,14 @@ const FussNews = () => {
     },
   ];
 
+  const today = new Date().toISOString().split("T")[0];
+
   // Filter tips for future dates out
   const tips = allTips
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-    .filter((tip) => tip.date < today);
+    .filter((tip) => tip.date <= today);
 
   // find todays tip based on the current date
-  const today = new Date().toISOString().split("T")[0];
   const todaysTip = tips.find((tip) => tip.date === today);
 
   const updates = [
