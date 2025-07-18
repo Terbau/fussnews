@@ -4,15 +4,6 @@ import { Home, Calendar, Trophy, Target, ChevronLeft } from "lucide-react";
 const FussNews = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
-  const gameOfTheDay = {
-    title: "Frontpass",
-    description:
-      "Lenge har forsvaret dominert banen. Den tiden er slutt. Nå er det angrepet som står for målene, og det viktigste er å få ballen kontrollert frem til spissen. Har du en Pelé fra Pakistan på laget, eksploderer sjansene for en seier astronomisk.",
-    difficulty: "Intermediate",
-    icon: <Target className="w-6 h-6" />,
-    date: "2025-07-16",
-  };
-
   const tips = [
     {
       id: 0,
@@ -174,7 +165,7 @@ const FussNews = () => {
         <div className="bg-white rounded-xl shadow-lg p-8 mb-12 border-l-4 border-green-500">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center">
-              {gameOfTheDay.icon}
+              {todaysTip?.icon}
               <h2 className="text-2xl font-bold text-gray-800 ml-3">
                 Dagens strategi
               </h2>
@@ -187,16 +178,16 @@ const FussNews = () => {
             </button>
           </div>
           <h3 className="text-xl font-semibold text-green-700 mb-3">
-            {gameOfTheDay.title}
+            {todaysTip?.title}
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed mb-4">
-            {gameOfTheDay.description}
+            {todaysTip?.description}
           </p>
           <div className="flex items-center justify-between">
             <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-              {gameOfTheDay.difficulty}
+              {todaysTip?.difficulty}
             </div>
-            <div className="text-sm text-gray-500">{gameOfTheDay.date}</div>
+            <div className="text-sm text-gray-500">{todaysTip?.date}</div>
           </div>
         </div>
 
