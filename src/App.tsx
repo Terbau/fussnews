@@ -58,6 +58,22 @@ const FussNews = () => {
       icon: <Target className="w-6 h-6" />,
       date: "2025-07-21",
     },
+    {
+      id: 5,
+      title: "Wallride",
+      description: "Nye strategien er å slå til ballen så hardt man bare kan. Få den til å sprette overalt, og før ballen langs veggen for å styre den kontrollert mot motstanderens mål.",
+      difficulty: "Advanced",
+      icon: <Target className="w-6 h-6" />,
+      date: "2025-07-22",
+    },
+    {
+      id: 5,
+      title: "Hang-af",
+      description: "I dag er alle litt hang, og med det handler det om å henge med. Gi litt faen i å dra den spaken frem og tilbake. Fyr løs og håp på det beste. Det er tross alt onsdag...",
+      difficulty: "Advanced",
+      icon: <Target className="w-6 h-6" />,
+      date: "2025-07-23",
+    },
   ];
 
   const today = new Date().toISOString().split("T")[0];
